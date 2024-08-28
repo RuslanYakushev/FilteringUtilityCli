@@ -12,7 +12,7 @@
  * Программа запускается пользователем в терминале, для этого в терминале необходимо перейти в директорию с утилитой и выполнить запуск, указав файлы для обработки.
  * Входящие файлы указать по названию через пробел.
  * Исходящие файлы будут сохранены в директории с утилитой, если нужен другой путь для сохранения, то указать опцию `-o` при запуске и полный путь.
- * ВАЖНО - указывается полный путь, который завершается косой чертой `/`.
+ * ВАЖНО - указывается полный путь, который завершается косой чертой `/`, указанная диретория должна существовать.
  * Названия исходящих файлов будет по их типу, дополнительно можно установить префикс к названию с помощью опции `-p`.
  * После указания опции (регистр не имеет значения) необходимо указать следующим элементом значение для этой опции, если опция не принимает значение, то её можно указать в любом месте после имени утилиты.
  * При работе утилиты выводится успешные шаги : запуск, чтение, запись.
@@ -23,10 +23,10 @@
  * Пример запуска с опцией `-o` : `java FiltrationCli strings.txt integers.txt doubles.txt -o /home/user/` 
  * Пример запуска с опцией `-p` : `java FiltrationCli strings.txt integers.txt doubles.txt -p test_`
 
-# Использование :
+# Установка :
  * Перейти в директорию для программы и склонировать командой : `git clone https://github.com/RuslanYakushev/FilteringUtilityCli.git`
- * Пример запуска со всеми параметрами : `java FilteringUtilityCli integers.txt floats.txt strings.txt -o /home/ruslan/Projects/shift_test/FilteringUtilityCli/src/result/ -p tak_ -a -f -s`
- * Пример запуска со всеми параметрами : `java -jar FilteringUtilityCli.jar integers.txt floats.txt strings.txt -o /home/ruslan/Projects/shift_test/FilteringUtilityCli/src/result/ -p tak_  -f -s`
+ * Пример запуска со всеми параметрами : `java FilteringUtilityCli integers.txt floats.txt strings.txt -o /path/ -p test_ -a -f -s`
+ * Пример запуска со всеми параметрами : `java -jar FilteringUtilityCli.jar integers.txt floats.txt strings.txt -o /path/ -p test_  -f -s`
 
 # Собрать :
  * Перейти в директорию для программы и склонировать командой : `git clone https://github.com/RuslanYakushev/FilteringUtilityCli.git`
