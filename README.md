@@ -1,6 +1,6 @@
 # FilteringUtilityCli
 # Общая информация :
- * Название : FiltrationCli
+ * Название : FilteringUtilityCli
  * Интерфейс : CLI
  * Язык программирования : Java
  * Платформа : openjdk version "21.0.2" 2024-01-16 LTS.
