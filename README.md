@@ -23,7 +23,15 @@
  * Пример запуска с опцией `-o` : `java FiltrationCli strings.txt integers.txt doubles.txt -o /home/user/` 
  * Пример запуска с опцией `-p` : `java FiltrationCli strings.txt integers.txt doubles.txt -p test_`
 
-# Собрать и использовать :
- * Пример компиляции : `javac FilteringUtilityCli.java -Xlint`
+# Использование :
+ * Перейти в директорию для программы и склонировать командой : `git clone https://github.com/RuslanYakushev/FilteringUtilityCli.git`
  * Пример запуска со всеми параметрами : `java FilteringUtilityCli integers.txt floats.txt strings.txt -o /home/ruslan/Projects/shift_test/FilteringUtilityCli/src/result/ -p tak_ -a -f -s`
+ * Пример запуска со всеми параметрами : `java -jar FilteringUtilityCli.jar integers.txt floats.txt strings.txt -o /home/ruslan/Projects/shift_test/FilteringUtilityCli/src/result/ -p tak_  -f -s`
+
+# Собрать :
+ * Перейти в директорию для программы и склонировать командой : `git clone https://github.com/RuslanYakushev/FilteringUtilityCli.git`
+ * Пример компиляции : `javac FilteringUtilityCli.java -Xlint`
+ * Создания архива : `jar cfm FilteringUtilityCli.jar MANIFEST.MF *.class`
+
+
  
