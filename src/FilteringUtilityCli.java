@@ -148,7 +148,12 @@ public class FilteringUtilityCli {
             // проверяем каждый список на наличие элементов
             if(inputInteger.getCount() > 0){
                 File fileInteger = new File(resultPath + prefixName + inputInteger.getNameOutputFile());
-                System.out.println("File integer.txt recorded");
+                File directory = new File(resultPath);
+                if (resultPath.length() > 0 && !directory.exists()) {
+                    directory.mkdirs();
+                    System.out.println("directory created");
+                }
+                System.out.println("file integer.txt recorded");
                 writer = new BufferedWriter(new FileWriter(fileInteger, addToFile));
 
                 for (int i = 0; i < inputInteger.getCount(); i++) {
@@ -158,7 +163,7 @@ public class FilteringUtilityCli {
             }
             if(inputFloat.getCount() > 0) {
                 File fileDouble = new File(resultPath + prefixName + inputFloat.getNameOutputFile());
-                System.out.println("File float.txt recorded");
+                System.out.println("file float.txt recorded");
 
                 writer = new BufferedWriter(new FileWriter(fileDouble,addToFile));
                 for (int i = 0; i < inputFloat.getCount(); i++) {
@@ -168,7 +173,7 @@ public class FilteringUtilityCli {
             }
             if(inputString.getCount() > 0) {
                 File fileString = new File(resultPath + prefixName + inputString.getNameOutputFile());
-                System.out.println("File string.txt recorded");
+                System.out.println("file string.txt recorded");
                 writer = new BufferedWriter(new FileWriter(fileString,addToFile));
 
                 for (int i = 0; i < inputString.getCount(); i++) {
@@ -177,7 +182,7 @@ public class FilteringUtilityCli {
                 writer.close();
             }
         } catch (IOException e) {
-            System.out.println("Error recorded file!");
+            System.out.println("error recorded file!");
             e.printStackTrace();
         }
     }
@@ -202,10 +207,10 @@ public class FilteringUtilityCli {
                             inputString.addString(readStr);
                         }
                     }
-                    System.out.printf("File %s read \n", inputFiles.get(i));
+                    System.out.printf("file %s read \n", inputFiles.get(i));
                     reader.close();
                 } catch (Exception e) {
-                    System.out.println("File not found : " + inputFiles.get(i));
+                    System.out.println("file not found : " + inputFiles.get(i));
                 }
             }
         }
